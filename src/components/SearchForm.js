@@ -8,15 +8,17 @@ class SearchForm extends Component {
     }
   }
 
-  onSubmitSearch = (e) => {
-    e.preventDefault();
-    this.props.searchForSpell(this.state.searchQuery)
-  }
+  // onSubmitSearch = (e) => {
+  //   e.preventDefault();
+  //   const submittedQuery = this.state.searchQuery.toLowerCase()
+  //   this.props.searchForSpell(submittedQuery)
+  // }
 
   handleSearchChange = (e) => {
     this.setState({
       searchQuery: e.target.value
     })
+    this.props.searchForSpell(this.state.searchQuery)
   }
 
   render() {
@@ -27,7 +29,7 @@ class SearchForm extends Component {
           <input id="search" type="text" placeholder="Search for spell" 
             onChange={(e)=> {this.handleSearchChange(e)}} 
             value={this.state.searchQuery}/>
-          <button type="submit">Search</button>
+          {/* <button type="submit">Search</button> */}
         </form>
       </div>
     )

@@ -32,9 +32,7 @@ class Filters extends Component {
     } else {
       this.activeFilters = this.activeFilters.filter(filterValues => filterValues !== checkedValue)
     }
-  }
 
-  sendFilters() {
     this.props.filterSpells(this.activeFilters)
   }
 
@@ -42,7 +40,7 @@ class Filters extends Component {
     return (
       <div className="filters flex-container">
 
-        <ul className="filterLevel">Spell Level
+        <ul className="filterLevel">Select Level {`\u25BC`}
           <li>
             <ul className="dropMenu">
               <li>
@@ -128,7 +126,7 @@ class Filters extends Component {
           </li>
         </ul>
 
-        <ul className="filterClass">Class
+        <ul className="filterClass">Select Class {`\u25BC`}
           <li>
             <ul className="dropMenu">
               <li>
@@ -197,11 +195,6 @@ class Filters extends Component {
             </ul>
           </li>
         </ul>
-        
-        <button onClick={()=>{this.sendFilters()}}>
-          Apply Filters
-        </button>
-
       </div>
     )
   }

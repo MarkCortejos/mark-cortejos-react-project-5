@@ -54,7 +54,6 @@ class App extends Component {
   // recursive function for acquiring spells
   acquireSpells = (data) => {
     if (this.state.allSpells.length >= data.count === true) {
-      console.log('Final count', this.state.allSpells)
       this.setState({
         displayedSpells: this.state.allSpells
       }) 
@@ -118,6 +117,7 @@ class App extends Component {
     // display the results
   searchForSpell = (query) => {
     const searchResults = []
+    query = query.toLowerCase()
 
     this.state.allSpells.forEach(e => {
       if (e.name.toLowerCase().includes(query) === true) {

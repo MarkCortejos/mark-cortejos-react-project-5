@@ -23,7 +23,15 @@ class Display extends Component {
       isShowing: false
     })
   }
-
+  
+  renderLoading() {
+    return (
+      <div>
+        <p>Searching for spells... </p>
+      </div>
+    )
+  }
+  
   renderSpellList() {
     if (this.props.spellsToDisplay.length > 0) {
       return(
@@ -44,13 +52,6 @@ class Display extends Component {
     }
   }
 
-  renderLoading() {
-    return (
-      <div>
-        <p>Your spellbook is just warming up... </p>
-      </div>
-    )
-  }
 
   render() {
     return (
@@ -60,7 +61,14 @@ class Display extends Component {
             selectedSpellToDisplay={this.state.selectedSpell}
             close={this.closeSpellDesc}
             />
-        <div className = "spellList">   
+        <div>
+          <p className="listTitle flex-container">
+            <span>Spell Name</span>
+            <span>Spell School</span>
+            <span>Page #</span>
+          </p>
+        </div>
+        <div className = "spellList">
           {
             this.props.isLoading ? 
               this.renderLoading() : 
@@ -68,7 +76,7 @@ class Display extends Component {
             }
         </div>
         <div className="paperBottom">
-            <a href="#top">^to Top^</a>
+            {/* <a href="#top">^to Top^</a> */}
         </div>
       </div>
     )

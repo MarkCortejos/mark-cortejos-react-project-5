@@ -4,7 +4,7 @@ import logo from '../assets/DnD_Logo.png';
 class Header extends Component {
   render() {
     return (
-      <header className="flex-container" id="top">
+      <header id="top">
         <div className="title flex-container">
           <div className="logo">
             <img src={logo} alt="The Dungeons and Dragons logo"/>
