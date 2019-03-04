@@ -1,3 +1,5 @@
+/* ====================================SETUP===================================== */
+
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
@@ -6,17 +8,45 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+
+
+
+/* ====================================CSS RESOURCES===================================== */
+
+/* Parchment Paper Codepen - https://codepen.io/prez/pen/avmqrb */
+
+
+
+
+
+/* ====================================GENERAL STYLING===================================== */
+
 html {
-  font-size: 125%;
+  font-size: 100%;
 }
 
 body {
-  background-color: mediumslateblue;
+  background-color: black;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.App {
+  padding: 20px;
 }
 
 .wrapper {
-  max-width: 750px;
-  padding: 10px;
+  max-width: 500px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -49,16 +79,21 @@ header {
 header h1 {
   display: block;
   width: 40%;
+  color: azure;
 }
 
 /* ====================================SPELL LIST===================================== */
 
+.display {
+  background-image: url(./assets/paperBody.png);
+  background-size: contain;
+  background-repeat: repeat;
+}
 
 .spellList {
-  padding: 20px;
-  background-color: teal;
-  height: 75vh;
-  overflow: scroll;
+  padding: 10px 30px;
+  /* height: 70vh; */
+  /* overflow: auto; */
 }
 
 .listedSpell {
@@ -66,15 +101,17 @@ header h1 {
 }
 
 .listedSpell span {
-  width: 27.5%;
+  width: 25%;
 }
 
 .listedSpell span:first-of-type {
   width: 45%;
+  text-align: left
 }
 
 .listedSpell span:last-of-type {
   text-align: right;
+  width: 15%
 }
 
 .listedSpell:hover {
@@ -82,7 +119,26 @@ header h1 {
   cursor: pointer; 
 }
 
-/* ====================================SPELLDESC===================================== */
+.paperBottom {
+  background: url(./assets/paperBottom.png) black;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 10vh;
+   text-align: center;
+}
+
+.paperBottom a {
+  position: relative;
+  bottom: -15px;
+  padding: 5px;
+}
+
+.paperBottom a:hover, .paperBottom a:focus {
+  color: firebrick;
+}
+
+/* ====================================SPELL DESC===================================== */
 
 .modal {
   position: relative;
@@ -91,6 +147,7 @@ header h1 {
 
 .spellDisplay {
   margin: 0 auto;
+  padding: 10px;
   background-color: firebrick;
   position: absolute;
   top: -100px;
@@ -107,10 +164,79 @@ header h1 {
   justify-content: space-between;
 }
 
+
+/* ====================================SEARCH BAR===================================== */
+.searchBar {
+  background-image: url(./assets/paperTop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+}
+
+
+
+/* ====================================FILTERS===================================== */
+
+.filters {
+  width: 47.5%;
+}
+
+.filterLevel, .filterClass {
+  padding: 15px;
+  cursor: pointer;
+  background-color: azure;
+}
+
+.dropMenu {
+  position: absolute;
+  background-color: azure;
+}
+
+.dropMenu li {
+  padding: 0 15px;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  top: 100%;
+  left: 0;
+}
+
+ul:hover .dropMenu li {
+  visibility: visible;
+  opacity: 1;
+  display: block
+}
+
+.dropMenu input[type=checkbox] {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.dropMenu label {
+  cursor: pointer;
+}
+
+
+/* ====================================SEARCH FORM===================================== */
+
+.searchForm {
+  width: 47.5%;
+}
+
+
+
+
+
+
 /* ====================================FOOTER===================================== */
 
 footer {
   text-align: center;
-  width: 65%;
-  margin: 0 auto;
+  background: black;
+  color: azure;
+}
+
+footer p {
+  font-size: .8rem;
+  margin: 0;
 }
