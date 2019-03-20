@@ -136,6 +136,7 @@ class App extends Component {
         <Header />
           <SearchBar filterSpells={this.filterSpells} searchForSpell={this.searchForSpell}/>
           <Display isLoading = {this.state.isLoading} spellsToDisplay = {this.state.displayedSpells} />
+          <div className="wrapper paperBottom"></div>
           <Footer />
       </div>
     );

@@ -75,9 +75,7 @@ class Display extends Component {
               this.renderSpellList()
             }
         </div>
-        <div className="paperBottom">
-            {/* <a href="#top">^to Top^</a> */}
-        </div>
+        
       </div>
     )
   }

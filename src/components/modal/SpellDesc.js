@@ -15,7 +15,7 @@ class SpellDesc extends Component {
           }}
           >
         <div className="spellDisplay">
-          <div className="wrapper">
+          {/* <div className="wrapper"> */}
             <div className="closeButton clearfix">
               <p 
                 onClick={() => {this.props.close()}}
@@ -47,7 +47,7 @@ class SpellDesc extends Component {
               <span><u>Classes</u>: {this.props.selectedSpellToDisplay.dnd_class}</span>
               <span><u>Page</u>: {this.props.selectedSpellToDisplay.page}</span>
             </p>
-          </div>
+          {/* </div> */}
         </div>
       </div>
     )

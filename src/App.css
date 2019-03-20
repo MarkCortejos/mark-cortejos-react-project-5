@@ -26,8 +26,10 @@ html {
 }
 
 body {
-  background-color: black;
+  background: url('./assets/dndbkg.jpg') repeat;
   font-size: 1rem;
+  font-family: 'Srisakdi', cursive;
+  line-height: 1.6;
 }
 
 ul {
@@ -46,7 +48,7 @@ a {
 }
 
 .wrapper {
-  max-width: 500px;
+  width: 500px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -64,7 +66,7 @@ a {
 }
 
 .logo {
-  width:25%;
+  width:200px;
   padding: 10px;
 }
 
@@ -74,8 +76,8 @@ a {
 
 header h1 {
   display: block;
-  /* width: 40%; */
-  color: azure;
+  color: black;
+  font-size: 3rem
 }
 
 /* ====================================SPELL LIST===================================== */
@@ -88,19 +90,23 @@ header h1 {
 
 .spellList {
   height: 50vh;
-  padding: 10px 15px 20px 30px;
   overflow: auto;
+  scrollbar-width: thin;
+}
+
+.spellList p {
+  text-align: center;
 }
 
 .listTitle {
-  margin:0;
-  padding: 20px 30px 10px 30px;
   text-decoration: underline;
   font-weight: bold;
 }
 
 .listTitle, .listedSpell {
-  justify-content: space-between;
+  margin:0;
+  padding: 12px;
+  justify-content: space-evenly;
 }
 
 .listTitle span, .listedSpell span {
@@ -118,17 +124,17 @@ header h1 {
 }
 
 .listedSpell:hover {
-  color: firebrick;
+  color: #ED1C24;
   cursor: pointer; 
 }
 
 .paperBottom {
-  background: url(./assets/paperBottom.png) black;
+  background: url(./assets/paperBottom.png) ;
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  height: 10vh;
-   text-align: center;
+  height: 72px;
+  text-align: center;
 }
 
 .paperBottom a {
@@ -138,7 +144,7 @@ header h1 {
 }
 
 .paperBottom a:hover, .paperBottom a:focus {
-  color: firebrick;
+  color: #ED1C24;
 }
 
 /* ====================================SPELL DESC===================================== */
@@ -150,7 +156,7 @@ header h1 {
 
 .spellDisplay {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 35px;
   background-image: url(./assets/paperBody.png);
   background-position: center;
   background-size: contain;
@@ -164,6 +170,10 @@ header h1 {
   float: right;
   cursor: pointer;
   text-align: right;
+  font-size: 2rem;
+  margin: 0; 
+  color: #ED1C24;
+  font-weight: bold;
 }
 
 .descLine {
@@ -174,11 +184,11 @@ header h1 {
 /* ====================================SEARCH BAR===================================== */
 .searchBar {
   background-image: url(./assets/paperTop.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   justify-content: center;
   align-items: flex-end;
-  height: 20vh;
+  height: 124px;
 }
 
 
@@ -186,14 +196,12 @@ header h1 {
 /* ====================================FILTERS===================================== */
 
 .filters {
-  width: 55%;
-  height: 50%;
   justify-content: space-evenly;
 }
 
 .filterLevel, .filterClass {
   text-align: bottom;
-  padding-left: 10px;
+  padding-left: 15px;
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
@@ -236,10 +244,12 @@ ul:hover .dropMenu li {
 
 .searchForm {
   width: 45%;
+  text-align: center;
 }
 
 input[type=text] {
   width: 85%;
+  padding: 3px;
 }
 
 
@@ -248,8 +258,7 @@ input[type=text] {
 
 footer {
   text-align: center;
-  background: black;
-  color: azure;
+  color: black;
   height: 5vh;
 }
 
