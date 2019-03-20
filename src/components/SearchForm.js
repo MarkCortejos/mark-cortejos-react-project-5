@@ -8,11 +8,11 @@ class SearchForm extends Component {
     }
   }
 
-  // onSubmitSearch = (e) => {
-  //   e.preventDefault();
-  //   const submittedQuery = this.state.searchQuery.toLowerCase()
-  //   this.props.searchForSpell(submittedQuery)
-  // }
+  onSubmitSearch = (e) => {
+    e.preventDefault();
+    // const submittedQuery = this.state.searchQuery.toLowerCase()
+    // this.props.searchForSpell(submittedQuery)
+  }
 
   handleSearchChange = (e) => {
     this.setState({

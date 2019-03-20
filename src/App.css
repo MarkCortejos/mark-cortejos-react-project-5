@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  /* background image from https://www.spoonflower.com/profiles/pi-ratical */
   background: url('./assets/dndbkg.jpg') repeat;
   font-size: 1rem;
   font-family: 'Srisakdi', cursive;
@@ -63,11 +64,13 @@ a {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  min-width: 500px;
 }
 
 .logo {
-  width:200px;
-  padding: 10px;
+  width: 200px;
+  padding: 5px;
+  min-width: 200px;
 }
 
 .logo img {
@@ -76,8 +79,16 @@ a {
 
 header h1 {
   display: block;
-  color: black;
-  font-size: 3rem
+  color: #ED1C24;
+  font-size: 3rem;
+  margin: 0;
+}
+
+header p {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #ED1C24;
 }
 
 /* ====================================SPELL LIST===================================== */
@@ -123,9 +134,10 @@ header h1 {
   width: 15%
 }
 
-.listedSpell:hover {
+.listedSpell:hover, .listedSpell:focus {
   color: #ED1C24;
   cursor: pointer; 
+  font-weight: bold;
 }
 
 .paperBottom {
@@ -206,6 +218,7 @@ header h1 {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+  font-weight: bold;
 }
 
 .dropMenu {
@@ -213,7 +226,7 @@ header h1 {
 }
 
 .dropMenu li {
-  padding: 0 15px;
+  padding: 5px 15px;
   visibility: hidden;
   opacity: 0;
   display: none;
@@ -224,10 +237,10 @@ header h1 {
   background-size: cover;
 }
 
-ul:hover .dropMenu li {
+ul:hover .dropMenu li, ul:focus .dropMenu li {
   visibility: visible;
   opacity: 1;
-  display: block
+  display: block;
 }
 
 .dropMenu input[type=checkbox] {
@@ -237,13 +250,16 @@ ul:hover .dropMenu li {
 
 .dropMenu label {
   cursor: pointer;
+  padding: 10px;
 }
 
+.dropMenu label:hover, .dropMenu label:focus {
+  color: #ED1C24;
+}
 
 /* ====================================SEARCH FORM===================================== */
 
 .searchForm {
-  width: 45%;
   text-align: center;
 }
 
@@ -260,9 +276,6 @@ footer {
   text-align: center;
   color: black;
   height: 5vh;
-}
-
-footer p {
-  font-size: .8rem;
-  margin: 0;
+  color: #ED1C24;
+  font-weight: bold;
 }

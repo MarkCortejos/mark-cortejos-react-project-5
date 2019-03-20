@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from '../assets/DnD_Logo.png';
 
-class Header extends Component {
-  render() {
-    return (
-      <header id="top">
-        <div className="title flex-container">
-          <div className="logo">
-            <img src={logo} alt="The Dungeons and Dragons logo"/>
-          </div>
-          <h1>5e Spellbook</h1>
+const Header = () => {
+  return (
+    <header id="top">
+      <div className="title flex-container">
+        <div className="logo">
+          <img src={logo} alt="The Dungeons and Dragons logo"/>
         </div>
-      </header>
-    )
-  }
+        <h1>5e Infinity Scroll</h1>
+      </div>
+      <p>Filter and search through D&D 5e spells!</p>
+    </header>
+  )
 };
 
 

@@ -37,7 +37,7 @@ class Display extends Component {
       return(
         this.props.spellsToDisplay.map((spell, i) => {
           return (
-            <p className='listedSpell flex-container' key={i} onClick={e => { this.showSpellDesc(e, spell) }}>
+            <p tabindex='0' className='listedSpell flex-container' key={i} onClick={e => { this.showSpellDesc(e, spell) }}>
               <span>{spell.name}</span>
               <span>{spell.school}</span>
               <span>{spell.page}</span>

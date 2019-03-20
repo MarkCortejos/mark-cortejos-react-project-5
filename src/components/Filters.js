@@ -40,15 +40,15 @@ class Filters extends Component {
     return (
       <div className="filters flex-container">
 
-        <ul className="filterLevel">Select Level {`\u25BC`}
+        <ul tabindex='0' className="filterLevel">Select Level {`\u25BC`}
           <li>
-            <ul className="dropMenu">
+            <ul tabindex='0' className="dropMenu">
               <li>
                 <input id="Cantrip" value="Cantrip" type="checkbox"
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="Cantrip">Cantrip</label>
+                <label tabindex='0' htmlFor="Cantrip">Cantrip</label>
               </li>
 
               <li>
@@ -56,7 +56,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="1st-level">1st Level</label>
+                <label tabindex='0' htmlFor="1st-level">1st Level</label>
               </li>
 
               <li>
@@ -64,7 +64,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="2nd-level">2nd Level</label>
+                <label tabindex='0' htmlFor="2nd-level">2nd Level</label>
               </li>
 
               <li>
@@ -72,7 +72,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="3rd-level">3rd Level</label>
+                <label tabindex='0' htmlFor="3rd-level">3rd Level</label>
               </li>
 
               <li>
@@ -80,7 +80,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="4th-level">4th Level</label>
+                <label tabindex='0' htmlFor="4th-level">4th Level</label>
               </li>
 
               <li>
@@ -88,7 +88,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="5th-level">5th Level</label>
+                <label tabindex='0' htmlFor="5th-level">5th Level</label>
               </li>
 
               <li>
@@ -96,7 +96,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="6th-level">6th Level</label>
+                <label tabindex='0' htmlFor="6th-level">6th Level</label>
               </li>
 
               <li>
@@ -104,7 +104,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="7th-level">7th Level</label>
+                <label tabindex='0' htmlFor="7th-level">7th Level</label>
               </li>
 
               <li>
@@ -112,7 +112,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="8th-level">8th Level</label>
+                <label tabindex='0' htmlFor="8th-level">8th Level</label>
               </li>
 
               <li>
@@ -120,21 +120,21 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="9th-level">9th Level</label>
+                <label tabindex='0' htmlFor="9th-level">9th Level</label>
               </li>
             </ul>
           </li>
         </ul>
 
-        <ul className="filterClass">Select Class {`\u25BC`}
+        <ul tabindex='0' className="filterClass">Select Class {`\u25BC`}
           <li>
-            <ul className="dropMenu">
+            <ul tabindex='0' className="dropMenu">
               <li>
                 <input id="Bard" value="Bard" type="checkbox"
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="Bard">Bard</label>
+                <label tabindex='0' htmlFor="Bard">Bard</label>
               </li>
 
               <li>
@@ -142,7 +142,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="Cleric">Cleric</label>
+                <label tabindex='0' htmlFor="Cleric">Cleric</label>
               </li>
 
               <li>
@@ -150,7 +150,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="Druid">Druid</label>
+                <label tabindex='0' htmlFor="Druid">Druid</label>
               </li>
 
               <li>
@@ -158,7 +158,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="Paladin">Paladin</label>
+                <label tabindex='0' htmlFor="Paladin">Paladin</label>
               </li>
 
               <li>
@@ -166,7 +166,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="Ranger">Ranger</label>
+                <label tabindex='0' htmlFor="Ranger">Ranger</label>
               </li>
 
               <li>
@@ -174,7 +174,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="Sorcerer">Sorcerer</label>
+                <label tabindex='0' htmlFor="Sorcerer">Sorcerer</label>
               </li>
 
               <li>
@@ -182,7 +182,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="Warlock">Warlock</label>
+                <label tabindex='0' htmlFor="Warlock">Warlock</label>
               </li>
 
               <li>
@@ -190,7 +190,7 @@ class Filters extends Component {
                   defaultChecked="true"
                   onChange={e=>{this.updateFilter(e)}}
                 />
-                <label htmlFor="Wizard">Wizard</label>
+                <label tabindex='0' htmlFor="Wizard">Wizard</label>
               </li>
             </ul>
           </li>
